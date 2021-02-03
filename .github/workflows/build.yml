@@ -9,7 +9,6 @@ env:
 jobs:
   build_wheels:
     name: Build wheel on ${{ matrix.os }}
-    needs: [run_tests]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -39,7 +38,6 @@ jobs:
 
   build_source:
     runs-on: ubuntu-latest
-    needs: [run_tests]
 
     steps:
       - uses: actions/checkout@v2
