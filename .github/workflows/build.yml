@@ -8,6 +8,7 @@ env:
   CIBW_BEFORE_BUILD: python -m pip install cmake && git submodule update --init --recursive
   MACOSX_DEPLOYMENT_TARGET: "10.14"
   CIBW_MANYLINUX_X86_64_IMAGE: manylinux2010
+  CIBW_TEST_COMMAND: python -c "import psydapt"
 
 jobs:
   build_wheels:
