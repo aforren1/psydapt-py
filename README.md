@@ -4,6 +4,8 @@ For now, see the C++ documentation for details: https://aforren1.github.io/psyda
 
 See the demos/ folder for examples.
 
+Wheels are not yet on PyPI, but can be found under "Artifacts" in the latest successful workflow run here: https://github.com/aforren1/psydapt-py/actions
+
 ```python
 from psydapt import Scale
 import psydapt.questplus as qp
