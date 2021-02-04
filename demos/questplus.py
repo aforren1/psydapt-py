@@ -1,31 +1,11 @@
-Python bindings to https://github.com/aforren1/psydapt.
-
-For now, see the C++ documentation for details: https://aforren1.github.io/psydapt/index.html
-
-See the demos/ folder for examples.
-
-```python
 from psydapt import Scale
 import psydapt.questplus as qp
-from psydapt.staircase import Staircase
 from psydapt.questplus import Weibull
-
-x = Staircase(Staircase.Params(
-    start_val=0.5,
-    n_reversals=3,
-    step_sizes=[0.01, 0.001],
-    n_trials=20,
-    n_up=4,
-    n_down=3,
-    apply_initial_rule=True,
-    stim_scale=Scale.Linear,
-    min_val=0
-))
 
 intensities = [-3.5, -3.25, -3, -2.75, -2.5,
                -2.25, -2, -1.75, -1.5, -1.25,
                -1, -0.75, -0.5]
-y = Weibull(Weibull.Params(
+wei = Weibull(Weibull.Params(
     stim_scale=Scale.Log10,
     intensity=intensities,
     threshold=intensities,
@@ -40,4 +20,9 @@ y = Weibull(Weibull.Params(
 ))
 
 
-```
+trial_count = 20
+for i in range(trial_count):
+    next_stim = wei.next()
+    print(f'Stimulus val is {next_stim}.')
+    val = input('Correct (1/0)?')
+    wei.update(int(val))
