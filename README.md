@@ -1,7 +1,7 @@
 ```python
 from psydapt import Scale
-from psydapt.staircase import Staircase
 import psydapt.questplus as qp
+from psydapt.staircase import Staircase
 from psydapt.questplus import Weibull
 
 x = Staircase(Staircase.Params(
