@@ -10,10 +10,6 @@ from distutils.version import LooseVersion
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-# get requirements
-with open(os.path.join(here, 'requirements.txt'), encoding='utf-8') as f:
-    requirements = f.read().splitlines()
-
 # description for pypi
 with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     desc = f.read()
@@ -73,14 +69,13 @@ class CMakeBuild(build_ext):
 
 setup(
     name='psydapt',
-    version='0.0.2',
+    version='0.1.0a1',
     author='Alexander Forrence',
     author_email='alex.forrence@gmail.com',
     description='Bindings for psydapt (https://github.com/aforren1/psydapt)',
     url='https://github.com/aforren1/psydapt-py',
     long_description=desc,
     long_description_content_type='text/markdown',
-    install_requires=requirements,
     ext_modules=[CMakeExtension('psydapt')],
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
