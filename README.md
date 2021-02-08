@@ -1,10 +1,10 @@
 Python bindings to https://github.com/aforren1/psydapt.
 
+To install, either install from PyPI (`pip install psydapt`), or find the latest wheels under "Artifacts" here: https://github.com/aforren1/psydapt-py/actions. Windows users _may_ need the Microsoft Visual C++ runtime DLLs. One easy way to acquire those is via `pip install msvc-runtime`.
+
 For now, see the C++ documentation for details: https://aforren1.github.io/psydapt/index.html
 
 See the demos/ folder for examples.
-
-Wheels are not yet on PyPI, but can be found under "Artifacts" in the latest successful workflow run here: https://github.com/aforren1/psydapt-py/actions
 
 ```python
 from psydapt import Scale
