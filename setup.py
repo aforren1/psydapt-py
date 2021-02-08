@@ -69,7 +69,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name='psydapt',
-    version='0.1.1a1',
+    version='0.1.1a2',
     author='Alexander Forrence',
     author_email='alex.forrence@gmail.com',
     description='Bindings for psydapt (https://github.com/aforren1/psydapt)',
@@ -80,7 +80,7 @@ setup(
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
     classifiers=[
-        'License :: OSI Approved :: GPL3 License',
+        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         'Development Status :: 4 - Beta',
         'Intended Audience :: Science/Research',
         'Programming Language :: Python :: 3',
