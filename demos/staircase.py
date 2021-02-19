@@ -1,7 +1,7 @@
 from psydapt import Scale
 from psydapt.staircase import Staircase
 
-stair = Staircase(Staircase.Params(
+stair = Staircase(
     start_val=0.5,
     n_reversals=3,
     step_sizes=[0.1, 0.01],
@@ -11,7 +11,7 @@ stair = Staircase(Staircase.Params(
     apply_initial_rule=True,
     stim_scale=Scale.Linear,
     min_val=0
-))
+)
 
 not_done = True
 while not_done:

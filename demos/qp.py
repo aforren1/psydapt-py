@@ -5,7 +5,7 @@ from psydapt.questplus import Weibull
 intensities = [-3.5, -3.25, -3, -2.75, -2.5,
                -2.25, -2, -1.75, -1.5, -1.25,
                -1, -0.75, -0.5]
-wei = Weibull(Weibull.Params(
+wei = Weibull(
     stim_scale=Scale.Log10,
     intensity=intensities,
     threshold=intensities,
@@ -17,7 +17,7 @@ wei = Weibull(Weibull.Params(
     n=5, # currently unused
     max_consecutive_reps=2, # currently unused
     random_seed=1 # currently unused
-))
+)
 
 
 trial_count = 20

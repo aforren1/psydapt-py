@@ -12,7 +12,7 @@ import psydapt.questplus as qp
 from psydapt.staircase import Staircase
 from psydapt.questplus import Weibull
 
-x = Staircase(Staircase.Params(
+x = Staircase(
     start_val=0.5,
     n_reversals=3,
     step_sizes=[0.01, 0.001],
@@ -22,12 +22,12 @@ x = Staircase(Staircase.Params(
     apply_initial_rule=True,
     stim_scale=Scale.Linear,
     min_val=0
-))
+)
 
 intensities = [-3.5, -3.25, -3, -2.75, -2.5,
                -2.25, -2, -1.75, -1.5, -1.25,
                -1, -0.75, -0.5]
-y = Weibull(Weibull.Params(
+y = Weibull(
     stim_scale=Scale.Log10,
     intensity=intensities,
     threshold=intensities,
@@ -39,7 +39,7 @@ y = Weibull(Weibull.Params(
     n=5, # currently unused
     max_consecutive_reps=2, # currently unused
     random_seed=1 # currently unused
-))
+)
 
 
 ```
