@@ -69,7 +69,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name='psydapt',
-    version='0.1.2.0',
+    version='0.1.3.0',
     author='Alexander Forrence',
     author_email='alex.forrence@gmail.com',
     description='Bindings for psydapt (https://github.com/aforren1/psydapt)',

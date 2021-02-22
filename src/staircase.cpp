@@ -56,5 +56,5 @@ void pystaircase(py::module &m)
              "min_val"_a = std::nullopt,
              "max_val"_a = std::nullopt)
         .def("next", &Staircase::next)
-        .def("update", &Staircase::update, "value"_a, "stimulus"_a = std::nullopt);
+        .def("update", &Staircase::update, "response"_a, "stimulus"_a = std::nullopt);
 };

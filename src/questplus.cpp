@@ -165,7 +165,7 @@ void pyquestplus(py::module &m)
              "max_consecutive_reps"_a = 2,
              "random_seed"_a = 1)
         .def("next", &PWeibull::next)
-        .def("update", &PWeibull::update, "value"_a, "stimulus"_a = std::nullopt);
+        .def("update", &PWeibull::update, "response"_a, "stimulus"_a = std::nullopt);
 
     py::class_<PNormCDF>(m, "NormCDF")
         .def(py::init<svd, svd, svd, svd, svd, psydapt::Scale,
@@ -188,7 +188,7 @@ void pyquestplus(py::module &m)
              "max_consecutive_reps"_a = 2,
              "random_seed"_a = 1)
         .def("next", &PNormCDF::next)
-        .def("update", &PNormCDF::update, "value"_a, "stimulus"_a = std::nullopt);
+        .def("update", &PNormCDF::update, "response"_a, "stimulus"_a = std::nullopt);
 
     py::class_<PCSF>(m, "CSF")
         .def(py::init<svd, svd, svd, svd, svd,
@@ -220,5 +220,5 @@ void pyquestplus(py::module &m)
              "max_consecutive_reps"_a = 2,
              "random_seed"_a = 1)
         .def("next", &PCSF::next)
-        .def("update", &PCSF::update, "value"_a, "stimulus"_a = std::nullopt);
+        .def("update", &PCSF::update, "response"_a, "stimulus"_a = std::nullopt);
 };
